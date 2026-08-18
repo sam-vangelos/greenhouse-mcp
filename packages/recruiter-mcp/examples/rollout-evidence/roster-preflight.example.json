@@ -1,0 +1,29 @@
+{
+  "ok": false,
+  "status": "not_ready",
+  "evidenceState": "example_only",
+  "warning": "Static expected-shape example only. Replace it with a real managed-roster preflight report.",
+  "generatedAt": "2026-06-23T00:00:00.000Z",
+  "rosterSource": "okta_group",
+  "verifiedBy": "ops-reviewer@example.com",
+  "requestedEmailCount": 1,
+  "normalizedEmailCount": 1,
+  "requestedSurfaces": [
+    "claude_desktop",
+    "chatgpt_desktop"
+  ],
+  "expectedResolved": [
+    {
+      "email": "recruiter@example.com",
+      "subject": "email:recruiter@example.com",
+      "greenhouseUserId": 101,
+      "surfaces": [
+        "claude_desktop",
+        "chatgpt_desktop"
+      ]
+    }
+  ],
+  "denied": [],
+  "containsTokens": false,
+  "canIssueSessions": true
+}

@@ -1,0 +1,12 @@
+{
+  "ok": false,
+  "evidenceState": "example_only",
+  "warning": "Static expected-shape example only. Replace it with a real revocation write report for the approved candidate deployment.",
+  "revokedAt": "2026-06-23T00:00:00.000Z",
+  "table": "recruiter_mcp_session_revocation",
+  "tokenId": "revoked-chatgpt-token-id",
+  "expectedStatus": "revoked",
+  "revokedBy": "ops-reviewer@example.com",
+  "reason": "revocation drill",
+  "containsTokens": false
+}

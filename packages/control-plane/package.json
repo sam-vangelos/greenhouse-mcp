@@ -1,0 +1,71 @@
+{
+  "name": "@greenhouse-mcp/control-plane",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Downloadable read-only recruiting operations MCP for the Greenhouse Harvest API.",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "greenhouse-ops-control-plane": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "examples",
+    "LAUNCHGUIDE.md",
+    "LICENSE",
+    "NOTICE",
+    "README.md",
+    "SECURITY.md",
+    "SUPPORT.md",
+    "THIRD_PARTY_NOTICES.md",
+    "start-here.md",
+    "server.example.json"
+  ],
+  "scripts": {
+    "clean": "node -e \"require('node:fs').rmSync('dist', { recursive: true, force: true })\"",
+    "build": "npm run clean && tsc",
+    "prepack": "npm run build",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "test": "tsx --test test/**/*.test.ts",
+    "audit:prod": "npm audit --omit=dev",
+    "pack:dry-run": "npm pack --dry-run",
+    "verify": "npm run build && npm test && npm run audit:prod && npm run pack:dry-run"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "greenhouse",
+    "greenhouse-harvest",
+    "greenhouse-ops",
+    "control-plane",
+    "harvest",
+    "recruiting",
+    "ats",
+    "talent-acquisition",
+    "recops"
+  ],
+  "license": "MIT",
+  "mcpName": "io.github.sam-vangelos/greenhouse-mcp",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sam-vangelos/greenhouse-mcp.git",
+    "directory": "mcp/greenhouse"
+  },
+  "bugs": {
+    "url": "https://github.com/sam-vangelos/greenhouse-mcp/issues"
+  },
+  "homepage": "https://github.com/sam-vangelos/greenhouse-mcp#readme",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.7.0"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "email": "recruiter@example.com",
+  "surface": "chatgpt_desktop",
+  "client": "chatgpt_codex_host",
+  "subject": "email:recruiter@example.com",
+  "tokenId": "chatgpt-token-id",
+  "issuedAt": "2026-06-23T00:00:00.000Z",
+  "token": "eyJzdWJqZWN0IjoiZW1haWw6cmVjcnVpdGVyQGV4YW1wbGUuY29tIiwiZW1haWwiOiJyZWNydWl0ZXJAZXhhbXBsZS5jb20iLCJzdXJmYWNlIjoiY2hhdGdwdF9kZXNrdG9wIiwiY2xpZW50IjoiY2hhdGdwdF9jb2RleF9ob3N0IiwidG9rZW5JZCI6ImNoYXRncHQtdG9rZW4taWQiLCJpc3N1ZWRBdCI6IjIwMjYtMDYtMjNUMDA6MDA6MDAuMDAwWiJ9.example-signature"
+}

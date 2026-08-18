@@ -1,0 +1,56 @@
+{
+  "name": "@greenhouse-mcp/recruiter-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.16.0 <21 || >=22.3.0"
+  },
+  "description": "Recruiter-scoped Greenhouse MCP surface for per-user evidence and analysis.",
+  "bin": {
+    "greenhouse-recruiter-mcp": "bin/greenhouse-recruiter-mcp.mjs",
+    "greenhouse-recruiter-mcp-http": "bin/greenhouse-recruiter-mcp-http.mjs",
+    "greenhouse-recruiter-check-production-env": "bin/greenhouse-recruiter-check-production-env.mjs",
+    "greenhouse-recruiter-probe": "bin/greenhouse-recruiter-probe.mjs",
+    "greenhouse-recruiter-sample-leakage": "bin/greenhouse-recruiter-sample-leakage.mjs",
+    "greenhouse-recruiter-validate-distribution": "bin/greenhouse-recruiter-validate-distribution.mjs",
+    "greenhouse-recruiter-init-rollout-evidence": "bin/greenhouse-recruiter-init-rollout-evidence.mjs",
+    "greenhouse-recruiter-rollout-gate": "bin/greenhouse-recruiter-rollout-gate.mjs",
+    "greenhouse-recruiter-rollout-status": "bin/greenhouse-recruiter-rollout-status.mjs",
+    "greenhouse-recruiter-build-rollout-manifest": "bin/greenhouse-recruiter-build-rollout-manifest.mjs",
+    "greenhouse-recruiter-pack-rollout-evidence": "bin/greenhouse-recruiter-pack-rollout-evidence.mjs",
+    "greenhouse-recruiter-review-audit": "bin/greenhouse-recruiter-review-audit.mjs",
+    "greenhouse-recruiter-desktop-config": "bin/greenhouse-recruiter-desktop-config.mjs",
+    "greenhouse-recruiter-claude-mcpb": "bin/greenhouse-recruiter-claude-mcpb.mjs",
+    "greenhouse-recruiter-record-desktop-delivery": "bin/greenhouse-recruiter-record-desktop-delivery.mjs",
+    "greenhouse-recruiter-record-desktop-test": "bin/greenhouse-recruiter-record-desktop-test.mjs",
+    "greenhouse-recruiter-check-identity": "bin/greenhouse-recruiter-check-identity.mjs",
+    "greenhouse-recruiter-bootstrap-identity": "bin/greenhouse-recruiter-bootstrap-identity.mjs",
+    "greenhouse-recruiter-preflight-roster": "bin/greenhouse-recruiter-preflight-roster.mjs",
+    "greenhouse-recruiter-issue-session": "bin/greenhouse-recruiter-issue-session.mjs",
+    "greenhouse-recruiter-revoke-session": "bin/greenhouse-recruiter-revoke-session.mjs",
+    "greenhouse-recruiter-revocation-drill": "bin/greenhouse-recruiter-revocation-drill.mjs",
+    "greenhouse-recruiter-reconcile-identity": "bin/greenhouse-recruiter-reconcile-identity.mjs",
+    "greenhouse-recruiter-snapshot": "bin/greenhouse-recruiter-snapshot.mjs"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "tsx --test test/**/*.test.ts",
+    "guard": "node scripts/verify-package.mjs && node scripts/check-harvest-v3-registry.mjs",
+    "check:harvest-registry": "node scripts/check-harvest-v3-registry.mjs",
+    "verify": "npm run typecheck && npm test && npm run guard"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "mammoth": "1.12.0",
+    "pdf-parse": "2.4.5",
+    "yauzl": "3.4.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.7.0"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,33 @@
+{
+  "name": "@greenhouse-mcp/action-mcp",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "description": "Typed preview/apply Greenhouse action MCP.",
+  "bin": {
+    "greenhouse-action-access": "bin/greenhouse-action-access.mjs",
+    "greenhouse-action-issue-session": "bin/greenhouse-action-issue-session.mjs",
+    "greenhouse-action-reconcile": "bin/greenhouse-action-reconcile.mjs"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "node --import tsx --test test/**/*.test.ts",
+    "guard": "node scripts/verify-package.mjs",
+    "verify": "npm run typecheck && npm test && npm run guard && npm run build",
+    "smoke:sql": "node deploy/sql-smoke-test.mjs",
+    "probe:tokens": "node --import tsx src/token-probe.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.7.0"
+  },
+  "license": "MIT"
+}

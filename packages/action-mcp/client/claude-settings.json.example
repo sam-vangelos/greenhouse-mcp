@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "defaultMode": "default",
+    "allow": [
+      "mcp__greenhouse_action__preview_application_assignment_change",
+      "mcp__greenhouse_action__preview_job_owner_change",
+      "mcp__greenhouse_action__preview_application_stage_move",
+      "mcp__greenhouse_action__preview_application_rejection",
+      "mcp__greenhouse_action__preview_application_unreject",
+      "mcp__greenhouse_action__preview_candidate_note_create",
+      "mcp__greenhouse_action__preview_job_note_change",
+      "mcp__greenhouse_action__preview_application_attribution_change",
+      "mcp__greenhouse_action__preview_candidate_record_update",
+      "mcp__greenhouse_action__preview_offer_create",
+      "mcp__greenhouse_action__preview_offer_update"
+    ],
+    "ask": [
+      "mcp__greenhouse_action__apply_application_assignment_change",
+      "mcp__greenhouse_action__apply_job_owner_change",
+      "mcp__greenhouse_action__apply_application_stage_move",
+      "mcp__greenhouse_action__apply_application_rejection",
+      "mcp__greenhouse_action__apply_application_unreject",
+      "mcp__greenhouse_action__apply_candidate_note_create",
+      "mcp__greenhouse_action__apply_job_note_change",
+      "mcp__greenhouse_action__apply_application_attribution_change",
+      "mcp__greenhouse_action__apply_candidate_record_update",
+      "mcp__greenhouse_action__apply_offer_create",
+      "mcp__greenhouse_action__apply_offer_update"
+    ]
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "ok": false,
+  "status": "not_ready",
+  "evidenceState": "example_only",
+  "warning": "Static expected-shape example only. Replace it with production env-check output for the approved candidate deployment.",
+  "generatedAt": "2026-06-23T00:00:00.000Z",
+  "source": "env_file",
+  "envFile": "/secure/greenhouse-recruiter-production.env",
+  "expectedChecks": [
+    {
+      "name": "boolean_env_flags",
+      "status": "pass",
+      "summary": "Boolean environment flags are exact true/false values."
+    },
+    {
+      "name": "server_enabled",
+      "status": "pass",
+      "summary": "Recruiter MCP server is enabled."
+    },
+    {
+      "name": "tool_catalog",
+      "status": "pass",
+      "summary": "Recruiter MCP tool controls resolve to the exact 44-tool production allowlist."
+    },
+    {
+      "name": "greenhouse_client_id",
+      "status": "pass",
+      "summary": "GREENHOUSE_CLIENT_ID is configured."
+    },
+    {
+      "name": "greenhouse_client_secret",
+      "status": "pass",
+      "summary": "GREENHOUSE_CLIENT_SECRET is configured."
+    },
+    {
+      "name": "session_secret",
+      "status": "pass",
+      "summary": "GREENHOUSE_RECRUITER_SESSION_SECRET is configured with sufficient length."
+    },
+    {
+      "name": "scope_signing_secret",
+      "status": "pass",
+      "summary": "GREENHOUSE_RECRUITER_SCOPE_SIGNING_SECRET is configured for hosted scope artifacts."
+    },
+    {
+      "name": "detailed_readiness_auth",
+      "status": "pass",
+      "summary": "Detailed hosted readiness output is protected by a separate bearer token."
+    },
+    {
+      "name": "state_backend",
+      "status": "pass",
+      "summary": "Implemented recruiter state backend is configured: supabase_postgrest."
+    },
+    {
+      "name": "token_revocation_source",
+      "status": "pass",
+      "summary": "Supabase token revocation source is configured."
+    },
+    {
+      "name": "identity_directory",
+      "status": "pass",
+      "summary": "Supabase identity directory is configured."
+    },
+    {
+      "name": "audit_sink",
+      "status": "pass",
+      "summary": "Retained JSONL audit sink is configured."
+    },
+    {
+      "name": "rate_limiter",
+      "status": "pass",
+      "summary": "Hosted rate limiting is enabled."
+    },
+    {
+      "name": "runtime_limits",
+      "status": "pass",
+      "summary": "Runtime row, page, duration, and lookback limits are valid."
+    },
+    {
+      "name": "cors_origin_allowlist",
+      "status": "pass",
+      "summary": "Hosted CORS origin allowlist is exact and HTTPS-only."
+    },
+    {
+      "name": "http_body_limit",
+      "status": "pass",
+      "summary": "Hosted HTTP body byte limit is valid."
+    },
+    {
+      "name": "http_endpoint_config",
+      "status": "pass",
+      "summary": "Hosted HTTP endpoint paths and port are valid and distinct."
+    },
+    {
+      "name": "http_server_timeouts",
+      "status": "pass",
+      "summary": "Hosted HTTP header, request, and keep-alive timeouts are valid."
+    },
+    {
+      "name": "external_lookup_timeouts",
+      "status": "pass",
+      "summary": "External identity and revocation lookup timeouts are valid."
+    },
+    {
+      "name": "permission_freshness",
+      "status": "pass",
+      "summary": "Permission lookup TTL is zero for hosted rollout."
+    },
+    {
+      "name": "operator_allowlist",
+      "status": "pass",
+      "summary": "Operator actor allowlist syntax is valid."
+    },
+    {
+      "name": "remote_surfaces",
+      "status": "pass",
+      "summary": "Remote desktop surfaces are configured."
+    },
+    {
+      "name": "test_surface_disabled",
+      "status": "pass",
+      "summary": "Remote test surface sessions are disabled."
+    },
+    {
+      "name": "hosted_env_hygiene",
+      "status": "pass",
+      "summary": "Hosted process env does not contain desktop-only tokens or trusted preview targets."
+    }
+  ],
+  "configuredSurfaces": [
+    "chatgpt_desktop",
+    "claude_desktop"
+  ]
+}

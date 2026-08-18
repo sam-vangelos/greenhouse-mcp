@@ -1,0 +1,420 @@
+{
+  "version": 1,
+  "description": "Golden fixture for recruiter-scoped Greenhouse job scope resolution tests. Uses synthetic job/user ids only.",
+  "aliases": [
+    {
+      "alias": "FDE",
+      "canonical": "Forward Deployed Engineer",
+      "type": "role_family",
+      "risk": "medium",
+      "requires_confirmation": true
+    },
+    {
+      "alias": "FD",
+      "canonical": "Frontier Data",
+      "type": "ambiguous_acronym",
+      "risk": "high",
+      "requires_confirmation": true,
+      "collision_terms": ["Finance Director"]
+    }
+  ],
+  "personas": [
+    {
+      "id": "narrow_recruiter",
+      "greenhouse_user_id": 7001001,
+      "permission_scope_kind": "jobs",
+      "risk_profile": "narrow",
+      "accessible_job_ids": [9001001, 9001003, 9001004, 9001006, 9001007, 9001009, 9001010],
+      "can_view_confidential": false
+    },
+    {
+      "id": "site_admin",
+      "greenhouse_user_id": 7009000,
+      "permission_scope_kind": "operator",
+      "risk_profile": "admin",
+      "accessible_job_ids": "all",
+      "can_view_confidential": true
+    }
+  ],
+  "jobs": [
+    {
+      "greenhouse_job_id": 9001001,
+      "requisition_id": "CD-FD-US-101",
+      "title": "Client Director, Frontier Data - US",
+      "status": "open",
+      "department": "Frontier Data",
+      "office": "United States",
+      "location": "United States",
+      "opened_at": "2026-04-01",
+      "closed_at": null,
+      "recruiters": ["Synthetic Recruiter"],
+      "hiring_managers": ["Synthetic HM"],
+      "confidential": false,
+      "historical_titles": []
+    },
+    {
+      "greenhouse_job_id": 9001002,
+      "requisition_id": "CD-FD-EMEA-102",
+      "title": "Client Director, Frontier Data - EMEA",
+      "status": "open",
+      "department": "Frontier Data",
+      "office": "EMEA",
+      "location": "EMEA",
+      "opened_at": "2026-04-03",
+      "closed_at": null,
+      "recruiters": ["Synthetic Recruiter"],
+      "hiring_managers": ["Synthetic HM"],
+      "confidential": false,
+      "historical_titles": []
+    },
+    {
+      "greenhouse_job_id": 9001003,
+      "requisition_id": "FDE-IN-201",
+      "title": "Forward Deployed Engineer - India",
+      "status": "open",
+      "department": "Frontier Data",
+      "office": "India",
+      "location": "India",
+      "opened_at": "2026-05-01",
+      "closed_at": null,
+      "recruiters": ["Synthetic Recruiter"],
+      "hiring_managers": ["Synthetic HM"],
+      "confidential": false,
+      "historical_titles": ["FDE - India"]
+    },
+    {
+      "greenhouse_job_id": 9001004,
+      "requisition_id": "FDE-US-202",
+      "title": "Forward Deployed Engineer - US",
+      "status": "open",
+      "department": "Frontier Data",
+      "office": "United States",
+      "location": "United States",
+      "opened_at": "2026-05-02",
+      "closed_at": null,
+      "recruiters": ["Synthetic Recruiter"],
+      "hiring_managers": ["Synthetic HM"],
+      "confidential": false,
+      "historical_titles": ["FDE - US"]
+    },
+    {
+      "greenhouse_job_id": 9001005,
+      "requisition_id": "FD-US-301",
+      "title": "Finance Director - US",
+      "status": "open",
+      "department": "Finance",
+      "office": "United States",
+      "location": "United States",
+      "opened_at": "2026-05-05",
+      "closed_at": null,
+      "recruiters": ["Synthetic Finance Recruiter"],
+      "hiring_managers": ["Synthetic Finance HM"],
+      "confidential": false,
+      "historical_titles": []
+    },
+    {
+      "greenhouse_job_id": 9001006,
+      "requisition_id": "SAIS-US-401",
+      "title": "Senior Cloud Solutions Engineer - US",
+      "status": "open",
+      "department": "Solutions",
+      "office": "United States",
+      "location": "United States",
+      "opened_at": "2026-05-10",
+      "closed_at": null,
+      "recruiters": ["Synthetic Recruiter"],
+      "hiring_managers": ["Synthetic HM"],
+      "confidential": false,
+      "historical_titles": []
+    },
+    {
+      "greenhouse_job_id": 9001007,
+      "requisition_id": "SAIS-US-400",
+      "title": "Senior Cloud Solutions Engineer - US",
+      "status": "closed",
+      "department": "Solutions",
+      "office": "United States",
+      "location": "United States",
+      "opened_at": "2026-02-01",
+      "closed_at": "2026-05-01",
+      "recruiters": ["Synthetic Recruiter"],
+      "hiring_managers": ["Synthetic HM"],
+      "confidential": false,
+      "historical_titles": ["Senior AI Engineer - US"]
+    },
+    {
+      "greenhouse_job_id": 9001008,
+      "requisition_id": "STEALTH-501",
+      "title": "Stealth Executive Search",
+      "status": "open",
+      "department": "Executive",
+      "office": "United States",
+      "location": "United States",
+      "opened_at": "2026-05-12",
+      "closed_at": null,
+      "recruiters": ["Synthetic Executive Recruiter"],
+      "hiring_managers": ["Synthetic Executive HM"],
+      "confidential": true,
+      "historical_titles": []
+    },
+    {
+      "greenhouse_job_id": 9001009,
+      "requisition_id": "DUP-1",
+      "title": "Data Platform Engineer - US",
+      "status": "open",
+      "department": "Engineering",
+      "office": "United States",
+      "location": "United States",
+      "opened_at": "2026-05-15",
+      "closed_at": null,
+      "recruiters": ["Synthetic Recruiter"],
+      "hiring_managers": ["Synthetic HM"],
+      "confidential": false,
+      "historical_titles": []
+    },
+    {
+      "greenhouse_job_id": 9001010,
+      "requisition_id": "DUP-1",
+      "title": "Data Platform Engineer - India",
+      "status": "open",
+      "department": "Engineering",
+      "office": "India",
+      "location": "India",
+      "opened_at": "2026-05-16",
+      "closed_at": null,
+      "recruiters": ["Synthetic Recruiter"],
+      "hiring_managers": ["Synthetic HM"],
+      "confidential": false,
+      "historical_titles": []
+    }
+  ],
+  "expected_resolutions": [
+    {
+      "case_id": "recruiter_exact_job_id_auto_confirms",
+      "persona_id": "narrow_recruiter",
+      "input": {
+        "greenhouse_job_ids": [9001006],
+        "purpose": "scorecard_accountability"
+      },
+      "expected": {
+        "resolution_status": "resolved",
+        "scope_status": "confirmed",
+        "job_ids": [9001006],
+        "confirmation_required": false
+      }
+    },
+    {
+      "case_id": "recruiter_open_default_excludes_closed",
+      "persona_id": "narrow_recruiter",
+      "input": {
+        "query": "Senior Cloud Solutions Engineer",
+        "purpose": "pipeline_quality"
+      },
+      "expected": {
+        "resolution_status": "resolved",
+        "scope_status": "confirmed",
+        "job_ids": [9001006],
+        "excluded_job_ids": [9001007],
+        "confirmation_required": false
+      }
+    },
+    {
+      "case_id": "recruiter_include_closed_requires_confirmation",
+      "persona_id": "narrow_recruiter",
+      "input": {
+        "query": "Senior Cloud Solutions Engineer",
+        "filters": {
+          "status": ["open", "closed"]
+        },
+        "purpose": "pipeline_quality"
+      },
+      "expected": {
+        "resolution_status": "needs_confirmation",
+        "scope_status": "proposed",
+        "job_ids": [9001006, 9001007],
+        "confirmation_required": true,
+        "reason_codes": ["contains_closed_jobs", "multiple_matches"]
+      }
+    },
+    {
+      "case_id": "recruiter_frontier_data_ambiguous",
+      "persona_id": "narrow_recruiter",
+      "input": {
+        "query": "Frontier Data",
+        "purpose": "stage_latency"
+      },
+      "expected": {
+        "resolution_status": "needs_confirmation",
+        "scope_status": "proposed",
+        "job_ids": [9001001, 9001003, 9001004],
+        "confirmation_required": true,
+        "reason_codes": ["multiple_matches"]
+      }
+    },
+    {
+      "case_id": "site_admin_fde_alias_requires_confirmation",
+      "persona_id": "site_admin",
+      "input": {
+        "query": "Compare FDE reqs in India vs US",
+        "aliases": ["FDE"],
+        "filters": {
+          "locations": ["India", "United States"],
+          "status": ["open"],
+          "my_jobs_only": false
+        },
+        "purpose": "comparison"
+      },
+      "expected": {
+        "resolution_status": "needs_confirmation",
+        "scope_status": "proposed",
+        "job_ids": [9001003, 9001004],
+        "confirmation_required": true,
+        "reason_codes": ["admin_scope", "alias_expansion"]
+      }
+    },
+    {
+      "case_id": "site_admin_fd_alias_collision",
+      "persona_id": "site_admin",
+      "input": {
+        "query": "FD roles",
+        "aliases": ["FD"],
+        "purpose": "inventory"
+      },
+      "expected": {
+        "resolution_status": "ambiguous",
+        "scope_status": "proposed",
+        "job_ids": [9001001, 9001002, 9001003, 9001004, 9001005],
+        "confirmation_required": true,
+        "reason_codes": ["alias_expansion", "multiple_matches"]
+      }
+    },
+    {
+      "case_id": "duplicate_req_id_ambiguous",
+      "persona_id": "narrow_recruiter",
+      "input": {
+        "requisition_ids": ["DUP-1"],
+        "purpose": "inventory"
+      },
+      "expected": {
+        "resolution_status": "ambiguous",
+        "scope_status": "proposed",
+        "job_ids": [9001009, 9001010],
+        "confirmation_required": true,
+        "reason_codes": ["duplicate_req_id"]
+      }
+    },
+    {
+      "case_id": "hallucinated_req_no_match",
+      "persona_id": "narrow_recruiter",
+      "input": {
+        "requisition_ids": ["REQ-DOES-NOT-EXIST"],
+        "purpose": "inventory"
+      },
+      "expected": {
+        "resolution_status": "no_match",
+        "scope_status": "rejected",
+        "job_ids": [],
+        "confirmation_required": false
+      }
+    },
+    {
+      "case_id": "confidential_job_not_leaked_to_recruiter",
+      "persona_id": "narrow_recruiter",
+      "input": {
+        "query": "Stealth Executive",
+        "purpose": "inventory"
+      },
+      "expected": {
+        "resolution_status": "no_match",
+        "scope_status": "rejected",
+        "job_ids": [],
+        "forbidden_job_ids": [9001008],
+        "confirmation_required": false,
+        "must_not_include_titles": ["Stealth Executive Search"]
+      }
+    },
+    {
+      "case_id": "admin_all_jobs_never_silent",
+      "persona_id": "site_admin",
+      "input": {
+        "query": "all open jobs",
+        "filters": {
+          "status": ["open"],
+          "my_jobs_only": false
+        },
+        "purpose": "pipeline_quality"
+      },
+      "expected": {
+        "resolution_status": "needs_confirmation",
+        "scope_status": "proposed",
+        "confirmation_required": true,
+        "reason_codes": ["admin_scope", "broad_scope"]
+      }
+    },
+    {
+      "case_id": "partial_inventory_blocks_analysis",
+      "persona_id": "site_admin",
+      "input": {
+        "query": "Forward Deployed Engineer",
+        "simulate_inventory_complete": false,
+        "purpose": "pipeline_quality"
+      },
+      "expected": {
+        "resolution_status": "incomplete",
+        "scope_status": "rejected",
+        "job_ids": [],
+        "confirmation_required": true,
+        "reason_codes": ["partial_inventory"],
+        "analysis_allowed": false
+      }
+    }
+  ],
+  "v2_expected_resolutions": [
+    {
+      "case_id": "v2_narrow_recruiter_unique_partial_preview",
+      "persona_id": "narrow_recruiter",
+      "input": {
+        "query": "Senior Cloud Solutions Engineer",
+        "simulate_inventory_complete": false,
+        "purpose": "pipeline_quality"
+      },
+      "expected": {
+        "resolution_status": "incomplete",
+        "scope_status": "rejected",
+        "job_ids": [],
+        "matched_job_ids": [9001006],
+        "minimum_match_count": 1,
+        "confirmation_required": true,
+        "confirmation_token": null,
+        "scope_handle": null,
+        "reason_codes": ["partial_inventory"],
+        "analysis_allowed": false
+      }
+    },
+    {
+      "case_id": "v2_operator_confidential_partial_preview",
+      "persona_id": "site_admin",
+      "input": {
+        "query": "Stealth Executive",
+        "simulate_inventory_complete": false,
+        "filters": {
+          "status": ["open"],
+          "my_jobs_only": false
+        },
+        "purpose": "inventory"
+      },
+      "expected": {
+        "resolution_status": "incomplete",
+        "scope_status": "rejected",
+        "job_ids": [],
+        "matched_job_ids": [9001008],
+        "minimum_match_count": 1,
+        "confirmation_required": true,
+        "confirmation_token": null,
+        "scope_handle": null,
+        "reason_codes": ["partial_inventory", "contains_confidential_jobs"],
+        "analysis_allowed": false
+      }
+    }
+  ]
+}

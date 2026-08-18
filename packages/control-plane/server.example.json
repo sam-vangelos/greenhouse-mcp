@@ -1,0 +1,36 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.sam-vangelos/greenhouse-mcp",
+  "description": "Downloadable read-only recruiting operations MCP for Greenhouse.",
+  "repository": {
+    "url": "https://github.com/sam-vangelos/greenhouse-mcp",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "greenhouse-ops-control-plane",
+      "version": "1.0.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "GREENHOUSE_CLIENT_ID",
+          "description": "Greenhouse connection ID from your Greenhouse admin.",
+          "format": "string",
+          "isRequired": true,
+          "isSecret": true
+        },
+        {
+          "name": "GREENHOUSE_CLIENT_SECRET",
+          "description": "Greenhouse connection secret from your Greenhouse admin.",
+          "format": "string",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

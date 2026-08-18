@@ -1,0 +1,362 @@
+{
+  "/v3/application_stages": {
+    "scopeClass": "application_backed",
+    "sensitivityClass": "default_operational",
+    "defaultProjectionProfile": "default_operational"
+  },
+  "/v3/applications": {
+    "scopeClass": "job_scoped",
+    "sensitivityClass": "default_operational",
+    "defaultProjectionProfile": "default_operational"
+  },
+  "/v3/applied_candidate_tags": {
+    "scopeClass": "candidate_backed",
+    "sensitivityClass": "default_operational",
+    "defaultProjectionProfile": "default_operational"
+  },
+  "/v3/approval_flows": {
+    "scopeClass": "job_scoped",
+    "sensitivityClass": "role_gated",
+    "defaultProjectionProfile": "safe_reference"
+  },
+  "/v3/approver_groups": {
+    "scopeClass": "join_backed",
+    "sensitivityClass": "role_gated",
+    "defaultProjectionProfile": "safe_reference"
+  },
+  "/v3/approvers": {
+    "scopeClass": "join_backed",
+    "sensitivityClass": "role_gated",
+    "defaultProjectionProfile": "safe_reference"
+  },
+  "/v3/attachments": {
+    "scopeClass": "application_backed",
+    "sensitivityClass": "role_gated",
+    "defaultProjectionProfile": "safe_reference"
+  },
+  "/v3/blocked_spam_sources": {
+    "scopeClass": "admin_reference",
+    "sensitivityClass": "admin_diagnostic",
+    "defaultProjectionProfile": "admin_diagnostic"
+  },
+  "/v3/bulk_requests": {
+    "scopeClass": "admin_reference",
+    "sensitivityClass": "admin_diagnostic",
+    "defaultProjectionProfile": "admin_diagnostic"
+  },
+  "/v3/bulk_requests/{bulk_action_uuid}": {
+    "scopeClass": "admin_reference",
+    "sensitivityClass": "admin_diagnostic",
+    "defaultProjectionProfile": "admin_diagnostic"
+  },
+  "/v3/candidate_attribute_types": {
+    "scopeClass": "job_scoped",
+    "sensitivityClass": "default_operational",
+    "defaultProjectionProfile": "default_operational"
+  },
+  "/v3/candidate_educations": {
+    "scopeClass": "candidate_backed",
+    "sensitivityClass": "role_gated",
+    "defaultProjectionProfile": "safe_reference"
+  },
+  "/v3/candidate_employments": {
+    "scopeClass": "candidate_backed",
+    "sensitivityClass": "role_gated",
+    "defaultProjectionProfile": "safe_reference"
+  },
+  "/v3/candidate_tags": {
+    "scopeClass": "global_reference",
+    "sensitivityClass": "default_operational",
+    "defaultProjectionProfile": "default_operational"
+  },
+  "/v3/candidates": {
+    "scopeClass": "candidate_backed",
+    "sensitivityClass": "role_gated",
+    "defaultProjectionProfile": "safe_reference"
+  },
+  "/v3/close_reasons": {
+    "scopeClass": "global_reference",
+    "sensitivityClass": "default_operational",
+    "defaultProjectionProfile": "default_operational"
+  },
+  "/v3/custom_field_departments": {
+    "scopeClass": "global_reference",
+    "sensitivityClass": "role_gated",
+    "defaultProjectionProfile": "safe_reference"
+  },
+  "/v3/custom_field_offices": {
+    "scopeClass": "global_reference",
+    "sensitivityClass": "role_gated",
+    "defaultProjectionProfile": "safe_reference"
+  },
+  "/v3/custom_field_options": {
+    "scopeClass": "global_reference",
+    "sensitivityClass": "role_gated",
+    "defaultProjectionProfile": "safe_reference"
+  },
+  "/v3/custom_fields": {
+    "scopeClass": "global_reference",
+    "sensitivityClass": "role_gated",
+    "defaultProjectionProfile": "safe_reference"
+  },
+  "/v3/default_interviewers": {
+    "scopeClass": "join_backed",
+    "sensitivityClass": "default_operational",
+    "defaultProjectionProfile": "default_operational"
+  },
+  "/v3/demographic_answer_options": {
+    "scopeClass": "sensitive_personal",
+    "sensitivityClass": "compliance_sensitive",
+    "defaultProjectionProfile": "compliance_limited"
+  },
+  "/v3/demographic_answers": {
+    "scopeClass": "application_backed",
+    "sensitivityClass": "compliance_sensitive",
+    "defaultProjectionProfile": "compliance_limited"
+  },
+  "/v3/demographic_question_sets": {
+    "scopeClass": "sensitive_personal",
+    "sensitivityClass": "compliance_sensitive",
+    "defaultProjectionProfile": "compliance_limited"
+  },
+  "/v3/demographic_questions": {
+    "scopeClass": "sensitive_personal",
+    "sensitivityClass": "compliance_sensitive",
+    "defaultProjectionProfile": "compliance_limited"
+  },
+  "/v3/departments": {
+    "scopeClass": "global_reference",
+    "sensitivityClass": "default_operational",
+    "defaultProjectionProfile": "default_operational"
+  },
+  "/v3/eeoc": {
+    "scopeClass": "application_backed",
+    "sensitivityClass": "compliance_sensitive",
+    "defaultProjectionProfile": "compliance_limited"
+  },
+  "/v3/email_templates": {
+    "scopeClass": "global_reference",
+    "sensitivityClass": "role_gated",
+    "defaultProjectionProfile": "safe_reference"
+  },
+  "/v3/focus_candidate_attributes": {
+    "scopeClass": "job_scoped",
+    "sensitivityClass": "default_operational",
+    "defaultProjectionProfile": "default_operational"
+  },
+  "/v3/future_job_permissions": {
+    "scopeClass": "admin_reference",
+    "sensitivityClass": "admin_diagnostic",
+    "defaultProjectionProfile": "admin_diagnostic"
+  },
+  "/v3/interview_kits": {
+    "scopeClass": "job_scoped",
+    "sensitivityClass": "default_operational",
+    "defaultProjectionProfile": "default_operational"
+  },
+  "/v3/interviewer_tags": {
+    "scopeClass": "global_reference",
+    "sensitivityClass": "default_operational",
+    "defaultProjectionProfile": "default_operational"
+  },
+  "/v3/interviewers": {
+    "scopeClass": "interview_backed",
+    "sensitivityClass": "default_operational",
+    "defaultProjectionProfile": "default_operational"
+  },
+  "/v3/interviews": {
+    "scopeClass": "job_scoped",
+    "sensitivityClass": "default_operational",
+    "defaultProjectionProfile": "default_operational"
+  },
+  "/v3/job_board_custom_locations": {
+    "scopeClass": "job_scoped",
+    "sensitivityClass": "default_operational",
+    "defaultProjectionProfile": "default_operational"
+  },
+  "/v3/job_boards": {
+    "scopeClass": "global_reference",
+    "sensitivityClass": "default_operational",
+    "defaultProjectionProfile": "default_operational"
+  },
+  "/v3/job_candidate_attributes": {
+    "scopeClass": "job_scoped",
+    "sensitivityClass": "default_operational",
+    "defaultProjectionProfile": "default_operational"
+  },
+  "/v3/job_hiring_managers": {
+    "scopeClass": "job_scoped",
+    "sensitivityClass": "default_operational",
+    "defaultProjectionProfile": "default_operational"
+  },
+  "/v3/job_interview_stages": {
+    "scopeClass": "job_scoped",
+    "sensitivityClass": "default_operational",
+    "defaultProjectionProfile": "default_operational"
+  },
+  "/v3/job_interviews": {
+    "scopeClass": "job_scoped",
+    "sensitivityClass": "default_operational",
+    "defaultProjectionProfile": "default_operational"
+  },
+  "/v3/job_notes": {
+    "scopeClass": "job_scoped",
+    "sensitivityClass": "role_gated",
+    "defaultProjectionProfile": "safe_reference"
+  },
+  "/v3/job_owners": {
+    "scopeClass": "job_scoped",
+    "sensitivityClass": "default_operational",
+    "defaultProjectionProfile": "default_operational"
+  },
+  "/v3/job_post_locations": {
+    "scopeClass": "join_backed",
+    "sensitivityClass": "default_operational",
+    "defaultProjectionProfile": "default_operational"
+  },
+  "/v3/job_post_searchable_locations": {
+    "scopeClass": "job_scoped",
+    "sensitivityClass": "default_operational",
+    "defaultProjectionProfile": "default_operational"
+  },
+  "/v3/job_posts": {
+    "scopeClass": "job_scoped",
+    "sensitivityClass": "default_operational",
+    "defaultProjectionProfile": "default_operational"
+  },
+  "/v3/jobs": {
+    "scopeClass": "job_scoped",
+    "sensitivityClass": "default_operational",
+    "defaultProjectionProfile": "default_operational"
+  },
+  "/v3/notes": {
+    "scopeClass": "application_backed",
+    "sensitivityClass": "role_gated",
+    "defaultProjectionProfile": "safe_reference"
+  },
+  "/v3/offers": {
+    "scopeClass": "job_scoped",
+    "sensitivityClass": "role_gated",
+    "defaultProjectionProfile": "safe_reference"
+  },
+  "/v3/offices": {
+    "scopeClass": "global_reference",
+    "sensitivityClass": "default_operational",
+    "defaultProjectionProfile": "default_operational"
+  },
+  "/v3/openings": {
+    "scopeClass": "job_scoped",
+    "sensitivityClass": "default_operational",
+    "defaultProjectionProfile": "default_operational"
+  },
+  "/v3/pay_input_ranges": {
+    "scopeClass": "join_backed",
+    "sensitivityClass": "role_gated",
+    "defaultProjectionProfile": "safe_reference"
+  },
+  "/v3/pay_inputs": {
+    "scopeClass": "global_reference",
+    "sensitivityClass": "role_gated",
+    "defaultProjectionProfile": "safe_reference"
+  },
+  "/v3/prospect_details": {
+    "scopeClass": "application_backed",
+    "sensitivityClass": "role_gated",
+    "defaultProjectionProfile": "safe_reference"
+  },
+  "/v3/prospect_pool_stages": {
+    "scopeClass": "join_backed",
+    "sensitivityClass": "role_gated",
+    "defaultProjectionProfile": "safe_reference"
+  },
+  "/v3/prospect_pools": {
+    "scopeClass": "job_scoped",
+    "sensitivityClass": "role_gated",
+    "defaultProjectionProfile": "safe_reference"
+  },
+  "/v3/referrers": {
+    "scopeClass": "global_reference",
+    "sensitivityClass": "default_operational",
+    "defaultProjectionProfile": "default_operational"
+  },
+  "/v3/rejection_details": {
+    "scopeClass": "application_backed",
+    "sensitivityClass": "default_operational",
+    "defaultProjectionProfile": "default_operational"
+  },
+  "/v3/rejection_reasons": {
+    "scopeClass": "global_reference",
+    "sensitivityClass": "default_operational",
+    "defaultProjectionProfile": "default_operational"
+  },
+  "/v3/rejection_reasons/{id}": {
+    "scopeClass": "global_reference",
+    "sensitivityClass": "default_operational",
+    "defaultProjectionProfile": "default_operational"
+  },
+  "/v3/scorecard_candidate_attributes": {
+    "scopeClass": "scorecard_backed",
+    "sensitivityClass": "role_gated",
+    "defaultProjectionProfile": "safe_reference"
+  },
+  "/v3/scorecard_question_answer_options": {
+    "scopeClass": "join_backed",
+    "sensitivityClass": "role_gated",
+    "defaultProjectionProfile": "safe_reference"
+  },
+  "/v3/scorecard_question_answers": {
+    "scopeClass": "scorecard_backed",
+    "sensitivityClass": "role_gated",
+    "defaultProjectionProfile": "safe_reference"
+  },
+  "/v3/scorecard_question_candidate_attributes": {
+    "scopeClass": "scorecard_backed",
+    "sensitivityClass": "role_gated",
+    "defaultProjectionProfile": "safe_reference"
+  },
+  "/v3/scorecard_question_options": {
+    "scopeClass": "join_backed",
+    "sensitivityClass": "role_gated",
+    "defaultProjectionProfile": "safe_reference"
+  },
+  "/v3/scorecard_questions": {
+    "scopeClass": "join_backed",
+    "sensitivityClass": "role_gated",
+    "defaultProjectionProfile": "safe_reference"
+  },
+  "/v3/scorecards": {
+    "scopeClass": "application_backed",
+    "sensitivityClass": "role_gated",
+    "defaultProjectionProfile": "safe_reference"
+  },
+  "/v3/sources": {
+    "scopeClass": "global_reference",
+    "sensitivityClass": "default_operational",
+    "defaultProjectionProfile": "default_operational"
+  },
+  "/v3/tracking_links": {
+    "scopeClass": "job_scoped",
+    "sensitivityClass": "default_operational",
+    "defaultProjectionProfile": "default_operational"
+  },
+  "/v3/user_emails": {
+    "scopeClass": "sensitive_personal",
+    "sensitivityClass": "role_gated",
+    "defaultProjectionProfile": "safe_reference"
+  },
+  "/v3/user_job_permissions": {
+    "scopeClass": "admin_reference",
+    "sensitivityClass": "admin_diagnostic",
+    "defaultProjectionProfile": "internal_permission"
+  },
+  "/v3/user_roles": {
+    "scopeClass": "admin_reference",
+    "sensitivityClass": "admin_diagnostic",
+    "defaultProjectionProfile": "admin_diagnostic"
+  },
+  "/v3/users": {
+    "scopeClass": "global_reference",
+    "sensitivityClass": "role_gated",
+    "defaultProjectionProfile": "safe_reference"
+  }
+}

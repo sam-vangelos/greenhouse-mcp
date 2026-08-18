@@ -1,0 +1,37 @@
+**
+!package.json
+!package-lock.json
+!packages/
+!packages/control-plane/
+!packages/control-plane/package.json
+!packages/control-plane/tsconfig.json
+!packages/control-plane/src/
+!packages/control-plane/src/**
+!packages/scoped-core/
+!packages/scoped-core/package.json
+!packages/scoped-core/tsconfig.json
+!packages/scoped-core/src/
+!packages/scoped-core/src/**
+!packages/recruiter-mcp/
+!packages/recruiter-mcp/package.json
+!packages/recruiter-mcp/tsconfig.json
+!packages/recruiter-mcp/bin/
+!packages/recruiter-mcp/bin/**
+!packages/recruiter-mcp/src/
+!packages/recruiter-mcp/src/**
+!packages/recruiter-mcp/assets/
+!packages/recruiter-mcp/assets/**
+# The write plane. The recruiter server imports its built dist, so the image cannot start
+# without it; declaring it here keeps the build independent of any wider host context.
+!packages/action-mcp/
+!packages/action-mcp/package.json
+!packages/action-mcp/tsconfig.json
+!packages/action-mcp/tsconfig.build.json
+!packages/action-mcp/src/
+!packages/action-mcp/src/**
+node_modules
+**/node_modules
+.git
+.env
+.env.*
+*.log

@@ -1,0 +1,23 @@
+# Supabase CLI configuration for the scoped Greenhouse MCP's DEDICATED project.
+#
+# Remote project:  name "Greenhouse MCP", ref exampleprojectref000, org exampleorgid00000000.
+# It holds ONLY this MCP's access-control tables:
+#   - recruiter_identity_directory      (verified-email -> Greenhouse-user map; PII)
+#   - recruiter_mcp_session_revocation  (durable session kill-switch)
+#
+# This is a SEPARATE project from recruiting-ops-analytics (ref otherprojectref00000), which
+# owns the repo-root supabase/migrations/ tree (sweeps, YTD, notifications, ledgers). The MCP
+# tables deliberately do NOT live in that tree. Keeping a config.toml + migrations/ here makes
+# the boundary STRUCTURAL: `supabase db push` run from this directory enumerates ONLY the
+# migrations in this tree, so it cannot plant analytics schema in the MCP project, and an
+# analytics `db push` from the repo root cannot plant the MCP's PII/auth tables in analytics.
+#
+# Operate on the MCP project from THIS directory only, after binding the remote once:
+#   cd packages/recruiter-mcp
+#   supabase link --project-ref exampleprojectref000 --yes
+#   supabase db push            # applies migrations/0001_recruiter_identity_directory.sql
+#
+# Do NOT relink the repo-root checkout to this ref and push from there — that would apply the
+# analytics migrations to the MCP project. The two trees are linked and pushed independently.
+
+project_id = "scoped-recruiter-mcp"

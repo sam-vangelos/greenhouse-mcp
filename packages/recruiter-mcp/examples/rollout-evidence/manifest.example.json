@@ -1,0 +1,143 @@
+{
+  "version": 2,
+  "candidate": {
+    "mcpUrl": "",
+    "commit": ""
+  },
+  "liveProbes": [
+    {
+      "profile": "small_req_set",
+      "path": "live-probe-small-req-set.example.json",
+      "strict": true
+    },
+    {
+      "profile": "many_req_set",
+      "path": "live-probe-many-req-set.example.json",
+      "strict": true
+    },
+    {
+      "profile": "all_jobs_or_operator",
+      "path": "live-probe-all-jobs-or-operator.example.json",
+      "strict": true
+    },
+    {
+      "profile": "no_permissions",
+      "path": "live-probe-no-permissions.example.json",
+      "strict": false,
+      "expectZeroVisibleJobs": true
+    }
+  ],
+  "distributionValidations": [
+    {
+      "surface": "claude_desktop",
+      "client": "claude_desktop_chat",
+      "path": "distribution-claude-desktop.example.json"
+    },
+    {
+      "surface": "claude_desktop",
+      "client": "claude_code",
+      "path": "distribution-claude-code.example.json"
+    },
+    {
+      "surface": "chatgpt_desktop",
+      "client": "chatgpt_codex_host",
+      "path": "distribution-chatgpt-desktop.example.json"
+    }
+  ],
+  "productionEnvEvidence": {
+    "path": "production-env-check.example.json"
+  },
+  "revocationDrillEvidence": [
+    {
+      "surface": "claude_desktop",
+      "client": "claude_desktop_chat",
+      "path": "revocation-drill-claude-desktop.example.json"
+    },
+    {
+      "surface": "claude_desktop",
+      "client": "claude_code",
+      "path": "revocation-drill-claude-code.example.json"
+    },
+    {
+      "surface": "chatgpt_desktop",
+      "client": "chatgpt_codex_host",
+      "path": "revocation-drill.example.json"
+    }
+  ],
+  "sessionRevocationEvidence": [
+    {
+      "surface": "claude_desktop",
+      "client": "claude_desktop_chat",
+      "path": "session-revocation-claude-desktop.example.json"
+    },
+    {
+      "surface": "claude_desktop",
+      "client": "claude_code",
+      "path": "session-revocation-claude-code.example.json"
+    },
+    {
+      "surface": "chatgpt_desktop",
+      "client": "chatgpt_codex_host",
+      "path": "session-revocation.example.json"
+    }
+  ],
+  "rosterPreflightEvidence": {
+    "path": "roster-preflight.example.json"
+  },
+  "sessionIssuanceEvidence": {
+    "path": "issued-sessions/manifest.example.json"
+  },
+  "desktopConfigEvidence": {
+    "path": "desktop-configs/manifest.example.json"
+  },
+  "desktopDeliveryEvidence": {
+    "path": "desktop-delivery.example.json"
+  },
+  "desktopUserTests": [
+    {
+      "surface": "claude_desktop",
+      "client": "claude_desktop_chat",
+      "path": "desktop-claude-desktop.example.json"
+    },
+    {
+      "surface": "claude_desktop",
+      "client": "claude_code",
+      "path": "desktop-claude-code.example.json"
+    },
+    {
+      "surface": "chatgpt_desktop",
+      "client": "chatgpt_codex_host",
+      "path": "desktop-chatgpt-desktop.example.json"
+    }
+  ],
+  "permissionFreshnessEvidence": {
+    "removedReqDisappearedOnNextRead": false,
+    "addedReqAppearedWithoutDeploy": false,
+    "privateNotesDropped": false,
+    "scopedVsUnscopedLeakageSamplePassed": false,
+    "durableAccessTestedWithoutRoutineReverification": false,
+    "verifiedAt": "",
+    "verifiedBy": "",
+    "removedReqId": 0,
+    "removedReqRowsBeforeRemoval": 0,
+    "removedReqRowsAfterRemoval": -1,
+    "addedReqId": 0,
+    "addedReqRowsBeforeAddition": -1,
+    "addedReqRowsAfterAddition": 0,
+    "privateNoteId": 0,
+    "privateNoteRowsReturnedAfterScope": -1,
+    "durableSessionEmail": "",
+    "durableSessionSurface": "chatgpt_desktop",
+    "durableSessionTokenId": "",
+    "durableSessionTokenIdAfterRestart": "",
+    "durableSessionIssuedAt": "",
+    "durableSessionIssuedAtAfterRestart": "",
+    "routineReverificationPrompted": true
+  },
+  "leakageSampleEvidence": {
+    "path": "leakage-sample.example.json"
+  },
+  "auditReviewEvidence": {
+    "path": "audit-review.example.json"
+  }
+}

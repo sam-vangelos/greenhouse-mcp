@@ -1,0 +1,50 @@
+{
+  "reportVersion": 2,
+  "ok": false,
+  "status": "not_ready",
+  "evidenceState": "example_only",
+  "warning": "Static expected-shape example only. Replace it with a real retained-audit review from the approved candidate deployment.",
+  "reviewedAt": "2026-06-23T00:00:00.000Z",
+  "reviewer": "ops-reviewer@example.com",
+  "auditPath": "greenhouse-recruiter-audit.jsonl",
+  "totalEvents": 12,
+  "successEvents": 8,
+  "denialEvents": 4,
+  "v2StartEvents": 12,
+  "v2TerminalEvents": 12,
+  "undatedLegacyEvents": 0,
+  "unmatchedV2StartEvents": 0,
+  "legacyUnknownV2TerminalEvents": 0,
+  "surfaces": [
+    "chatgpt_desktop",
+    "claude_desktop"
+  ],
+  "toolKinds": [
+    "analysis",
+    "evidence"
+  ],
+  "v2Clients": [
+    "chatgpt_codex_host",
+    "claude_code",
+    "claude_desktop_chat"
+  ],
+  "retainedAuditSink": true,
+  "successEventsPresent": true,
+  "denialEventsPresent": true,
+  "surfaceCoveragePresent": true,
+  "v2ClientCoveragePresent": true,
+  "toolKindCoveragePresent": true,
+  "noSensitivePayloadsFound": true,
+  "expectedChecks": [
+    {
+      "name": "audit_v2_client_coverage",
+      "status": "pass",
+      "summary": "Retained v2 audit terminals include Claude Desktop, Claude Code, and ChatGPT/Codex attribution."
+    },
+    {
+      "name": "audit_v2_pair_attribution",
+      "status": "pass",
+      "summary": "Every v2 start/terminal pair has coherent client attribution."
+    }
+  ]
+}

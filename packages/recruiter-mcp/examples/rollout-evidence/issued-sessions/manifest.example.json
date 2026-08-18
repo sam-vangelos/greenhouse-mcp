@@ -1,0 +1,45 @@
+{
+  "ok": false,
+  "status": "not_ready",
+  "evidenceState": "example_only",
+  "outputDir": ".",
+  "manifestPath": "manifest.example.json",
+  "requestedEmailCount": 1,
+  "requestedSurfaces": [
+    "claude_desktop",
+    "chatgpt_desktop"
+  ],
+  "fileCount": 3,
+  "containsTokens": false,
+  "sessionFilesContainTokens": true,
+  "warning": "Static expected-shape example only. It omits durable tokens, but each example session file illustrates one recruiter's durable MCP token shape. Replace this manifest and its files with real issued-session output.",
+  "files": [
+    {
+      "email": "recruiter@example.com",
+      "surface": "claude_desktop",
+      "client": "claude_desktop_chat",
+      "subject": "email:recruiter@example.com",
+      "tokenId": "claude-token-id",
+      "path": "recruiter-claude.example.json",
+      "issuedAt": "2026-06-23T00:00:00.000Z"
+    },
+    {
+      "email": "recruiter@example.com",
+      "surface": "claude_desktop",
+      "client": "claude_code",
+      "subject": "email:recruiter@example.com",
+      "tokenId": "claude-code-token-id",
+      "path": "recruiter-claude-code.example.json",
+      "issuedAt": "2026-06-23T00:00:00.000Z"
+    },
+    {
+      "email": "recruiter@example.com",
+      "surface": "chatgpt_desktop",
+      "client": "chatgpt_codex_host",
+      "subject": "email:recruiter@example.com",
+      "tokenId": "chatgpt-token-id",
+      "path": "recruiter-chatgpt.example.json",
+      "issuedAt": "2026-06-23T00:00:00.000Z"
+    }
+  ]
+}

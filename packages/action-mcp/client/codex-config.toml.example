@@ -1,0 +1,88 @@
+# Replace the URL and export GREENHOUSE_ACTION_SESSION_TOKEN only in the user's
+# local environment. Never commit a real token. The default treats every tool
+# annotated as a write as approval-required; the per-tool entries make the
+# preview/apply boundary explicit.
+[mcp_servers.greenhouse_action]
+url = "https://greenhouse-action-mcp.example.com/mcp"
+bearer_token_env_var = "GREENHOUSE_ACTION_SESSION_TOKEN"
+enabled_tools = [
+  "preview_application_assignment_change",
+  "apply_application_assignment_change",
+  "preview_job_owner_change",
+  "apply_job_owner_change",
+  "preview_application_stage_move",
+  "apply_application_stage_move",
+  "preview_application_rejection",
+  "apply_application_rejection",
+  "preview_application_unreject",
+  "apply_application_unreject",
+  "preview_candidate_note_create",
+  "apply_candidate_note_create",
+  "preview_job_note_change",
+  "apply_job_note_change",
+  "preview_application_attribution_change",
+  "apply_application_attribution_change",
+  "preview_candidate_record_update",
+  "apply_candidate_record_update",
+  "preview_offer_create",
+  "apply_offer_create",
+  "preview_offer_update",
+  "apply_offer_update",
+]
+default_tools_approval_mode = "writes"
+required = true
+
+[mcp_servers.greenhouse_action.tools.preview_application_assignment_change]
+approval_mode = "approve"
+[mcp_servers.greenhouse_action.tools.apply_application_assignment_change]
+approval_mode = "prompt"
+
+[mcp_servers.greenhouse_action.tools.preview_job_owner_change]
+approval_mode = "approve"
+[mcp_servers.greenhouse_action.tools.apply_job_owner_change]
+approval_mode = "prompt"
+
+[mcp_servers.greenhouse_action.tools.preview_application_stage_move]
+approval_mode = "approve"
+[mcp_servers.greenhouse_action.tools.apply_application_stage_move]
+approval_mode = "prompt"
+
+[mcp_servers.greenhouse_action.tools.preview_application_rejection]
+approval_mode = "approve"
+[mcp_servers.greenhouse_action.tools.apply_application_rejection]
+approval_mode = "prompt"
+
+[mcp_servers.greenhouse_action.tools.preview_application_unreject]
+approval_mode = "approve"
+[mcp_servers.greenhouse_action.tools.apply_application_unreject]
+approval_mode = "prompt"
+
+[mcp_servers.greenhouse_action.tools.preview_candidate_note_create]
+approval_mode = "approve"
+[mcp_servers.greenhouse_action.tools.apply_candidate_note_create]
+approval_mode = "prompt"
+
+[mcp_servers.greenhouse_action.tools.preview_job_note_change]
+approval_mode = "approve"
+[mcp_servers.greenhouse_action.tools.apply_job_note_change]
+approval_mode = "prompt"
+
+[mcp_servers.greenhouse_action.tools.preview_application_attribution_change]
+approval_mode = "approve"
+[mcp_servers.greenhouse_action.tools.apply_application_attribution_change]
+approval_mode = "prompt"
+
+[mcp_servers.greenhouse_action.tools.preview_candidate_record_update]
+approval_mode = "approve"
+[mcp_servers.greenhouse_action.tools.apply_candidate_record_update]
+approval_mode = "prompt"
+
+[mcp_servers.greenhouse_action.tools.preview_offer_create]
+approval_mode = "approve"
+[mcp_servers.greenhouse_action.tools.apply_offer_create]
+approval_mode = "prompt"
+
+[mcp_servers.greenhouse_action.tools.preview_offer_update]
+approval_mode = "approve"
+[mcp_servers.greenhouse_action.tools.apply_offer_update]
+approval_mode = "prompt"
