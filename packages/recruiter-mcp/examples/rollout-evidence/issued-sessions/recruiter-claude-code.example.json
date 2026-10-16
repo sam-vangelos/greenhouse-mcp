@@ -1,0 +1,9 @@
+{
+  "email": "recruiter@example.com",
+  "surface": "claude_desktop",
+  "client": "claude_code",
+  "subject": "email:recruiter@example.com",
+  "tokenId": "claude-code-token-id",
+  "issuedAt": "2026-06-23T00:00:00.000Z",
+  "token": "eyJzdWJqZWN0IjoiZW1haWw6cmVjcnVpdGVyQGV4YW1wbGUuY29tIiwiZW1haWwiOiJyZWNydWl0ZXJAZXhhbXBsZS5jb20iLCJzdXJmYWNlIjoiY2xhdWRlX2Rlc2t0b3AiLCJjbGllbnQiOiJjbGF1ZGVfY29kZSIsInRva2VuSWQiOiJjbGF1ZGUtY29kZS10b2tlbi1pZCIsImlzc3VlZEF0IjoiMjAyNi0wNi0yM1QwMDowMDowMC4wMDBaIn0.example-signature"
+}

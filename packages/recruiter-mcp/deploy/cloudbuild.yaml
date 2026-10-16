@@ -1,0 +1,39 @@
+# Cloud Build recipe for the recruiter MCP image. Every deployment-specific value is a substitution;
+# PROJECT_ID is Cloud Build's built-in for the project the build runs in.
+#
+# The Dockerfile uses a BuildKit secret mount, which needs DOCKER_BUILDKIT=1; Cloud Build's docker
+# builder supports it. Build from the WORKSPACE ROOT so the workspace packages are in context, and
+# tag with the short git SHA so /version (GREENHOUSE_RECRUITER_BUILD_SHA) and the Artifact Registry
+# tag agree — the deploy preflight (cloud-run-deploy.mjs) refuses a SHA that is not on origin/main.
+#
+#   cd <workspace root> && git checkout <merge sha>
+#   node packages/recruiter-mcp/deploy/cloud-run-deploy.mjs <merge sha>
+#   gcloud builds submit --project <project-id> --config packages/recruiter-mcp/deploy/cloudbuild.yaml \
+#     --substitutions _SHORT_SHA=$(git rev-parse --short=8 HEAD),_REGION=<region>,_REPOSITORY=<repo> .
+#   gcloud run deploy <service-name> --region <region> --project <project-id> \
+#     --image <region>-docker.pkg.dev/<project-id>/<repo>/greenhouse-recruiter-mcp:<short sha> \
+#     --update-env-vars GREENHOUSE_RECRUITER_BUILD_SHA=<full sha>
+steps:
+  - name: gcr.io/cloud-builders/docker
+    env:
+      - DOCKER_BUILDKIT=1
+    args:
+      - build
+      - -f
+      - packages/recruiter-mcp/deploy/Dockerfile
+      - -t
+      - ${_REGION}-docker.pkg.dev/${PROJECT_ID}/${_REPOSITORY}/greenhouse-recruiter-mcp:${_SHORT_SHA}
+      - -t
+      - ${_REGION}-docker.pkg.dev/${PROJECT_ID}/${_REPOSITORY}/greenhouse-recruiter-mcp:latest
+      - .
+images:
+  - ${_REGION}-docker.pkg.dev/${PROJECT_ID}/${_REPOSITORY}/greenhouse-recruiter-mcp:${_SHORT_SHA}
+  - ${_REGION}-docker.pkg.dev/${PROJECT_ID}/${_REPOSITORY}/greenhouse-recruiter-mcp:latest
+substitutions:
+  _SHORT_SHA: manual
+  _REGION: us-central1
+  _REPOSITORY: greenhouse-mcp
+options:
+  machineType: E2_HIGHCPU_8
+  logging: CLOUD_LOGGING_ONLY
+timeout: 1800s

@@ -1,0 +1,43 @@
+{
+  "schema_version": 2,
+  "captured_at": "<ISO-8601 timestamp>",
+  "commit_sha": "<exact /version commit>",
+  "action_service_url": "<independent action URL>",
+  "client": "codex|claude_code",
+  "session": {
+    "token_id": "<action:...; never the bearer token>",
+    "issued_at": "<ISO-8601 timestamp>",
+    "expires_at": "<ISO-8601 timestamp>"
+  },
+  "action": {
+    "kind": "<one of the 11 action kinds>",
+    "preview_tool": "<preview tool name>",
+    "apply_tool": "<apply tool name>",
+    "target_ids": {},
+    "before": {},
+    "after": {},
+    "effects": []
+  },
+  "approval": {
+    "physical_prompt_observed": true,
+    "exact_preview_matched_apply": true,
+    "persistent_bypass_unavailable": true
+  },
+  "result": {
+    "action_id": "<uuid>",
+    "state": "succeeded|reconciled",
+    "readback_matched": true,
+    "replay_returned_same_action_id": true,
+    "replay_sent_no_second_mutation": true,
+    "greenhouse_ui_attribution_verified": true
+  },
+  "isolation": {
+    "read_service_health_unchanged": true,
+    "read_service_catalog_unchanged": true
+  },
+  "rollback": {
+    "writes_disabled_after_canary": true,
+    "write_capability_removed_after_canary": true,
+    "unresolved_actions_remaining": 0
+  }
+}

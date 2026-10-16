@@ -1,0 +1,152 @@
+{
+  "ok": false,
+  "status": "not_ready",
+  "evidenceState": "example_only",
+  "warning": "Static expected-shape example only. Replace it with a real strict probe from the approved candidate deployment.",
+  "strict": false,
+  "profile": "no_permissions",
+  "buildCommit": "",
+  "generatedAt": "2026-06-23T00:00:00.000Z",
+  "surface": "chatgpt_desktop",
+  "client": "chatgpt_codex_host",
+  "sessionSubjectPresent": true,
+  "sessionTokenId": "",
+  "sessionIssuedAt": "",
+  "auditEventCount": 14,
+  "expectedChecks": [
+    {
+      "name": "scoped_jobs_sample",
+      "status": "pass",
+      "summary": "no_permissions job sample",
+      "details": {
+        "rowsReturned": 0
+      }
+    },
+    {
+      "name": "expected_job_visibility",
+      "status": "skip",
+      "summary": "expected permitted jobs were visible"
+    },
+    {
+      "name": "forbidden_job_exclusion",
+      "status": "pass",
+      "summary": "known forbidden jobs were excluded"
+    },
+    {
+      "name": "endpoint_contract_jobs_ids",
+      "status": "skip",
+      "summary": "No visible job id available for list-by-id validation",
+      "details": {
+        "endpoint": "/jobs",
+        "filter": "ids"
+      }
+    },
+    {
+      "name": "endpoint_contract_forbidden_jobs_ids",
+      "status": "pass",
+      "summary": "known forbidden jobs were excluded by ids filter",
+      "details": {
+        "endpoint": "/jobs",
+        "filter": "ids",
+        "exactLeaks": 0
+      }
+    },
+    {
+      "name": "endpoint_contract_applications_ids",
+      "status": "skip",
+      "summary": "No visible application id available for list-by-id validation",
+      "details": {
+        "endpoint": "/applications",
+        "filter": "ids"
+      }
+    },
+    {
+      "name": "endpoint_contract_applications_job_ids",
+      "status": "skip",
+      "summary": "No visible application job_id available for job_ids validation",
+      "details": {
+        "endpoint": "/applications",
+        "filter": "job_ids"
+      }
+    },
+    {
+      "name": "endpoint_contract_applications_candidate_ids",
+      "status": "skip",
+      "summary": "No visible application candidate_id available for candidate_ids validation",
+      "details": {
+        "endpoint": "/applications",
+        "filter": "candidate_ids"
+      }
+    },
+    {
+      "name": "endpoint_contract_scorecards_application_ids",
+      "status": "pass",
+      "summary": "Scoped scorecard endpoint was reachable; no scorecard application_id was available for application_ids validation",
+      "details": {
+        "endpoint": "/scorecards",
+        "filter": "application_ids",
+        "rowsReturned": 0
+      }
+    },
+    {
+      "name": "scorecard_shape_sample",
+      "status": "skip",
+      "summary": "scorecard shape accepted for rollout"
+    },
+    {
+      "name": "scoped_applications_sample",
+      "status": "pass",
+      "summary": "application sample completed"
+    },
+    {
+      "name": "candidate_shape_sample",
+      "status": "pass",
+      "summary": "candidate shape accepted for rollout"
+    },
+    {
+      "name": "notes_visibility_sample",
+      "status": "pass",
+      "summary": "notes visibility sample completed"
+    },
+    {
+      "name": "scorecard_accountability_analysis",
+      "status": "pass",
+      "summary": "scorecard accountability analysis completed"
+    },
+    {
+      "name": "interview_feedback_drag_analysis",
+      "status": "pass",
+      "summary": "interview feedback drag analysis completed"
+    },
+    {
+      "name": "stage_latency_analysis",
+      "status": "pass",
+      "summary": "stage latency analysis completed"
+    },
+    {
+      "name": "pipeline_quality_analysis",
+      "status": "pass",
+      "summary": "pipeline quality analysis completed"
+    },
+    {
+      "name": "source_quality_analysis",
+      "status": "pass",
+      "summary": "source quality analysis completed"
+    },
+    {
+      "name": "rejection_reason_drift_analysis",
+      "status": "pass",
+      "summary": "rejection reason drift analysis completed"
+    },
+    {
+      "name": "question_planner_analysis",
+      "status": "pass",
+      "summary": "constrained question planner analysis completed"
+    },
+    {
+      "name": "activity_endpoint_shape",
+      "status": "skip",
+      "summary": "list_activity is intentionally not exposed in v1"
+    }
+  ]
+}

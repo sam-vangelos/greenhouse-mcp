@@ -1,0 +1,46 @@
+{
+  "ok": false,
+  "status": "not_ready",
+  "evidenceState": "example_only",
+  "warning": "Static expected-shape example only. Replace it with a real scoped-versus-unscoped leakage sample.",
+  "strict": true,
+  "generatedAt": "2026-06-23T00:00:00.000Z",
+  "surface": "chatgpt_desktop",
+  "client": "chatgpt_codex_host",
+  "buildCommit": "",
+  "sessionSubjectPresent": true,
+  "actAsUser": 101,
+  "expectedChecks": [
+    {
+      "name": "operator_unscoped_sample",
+      "status": "pass",
+      "summary": "Operator unscoped sample returned through the operator scope.",
+      "details": {
+        "scoped": false,
+        "permissionScopeKind": "operator"
+      }
+    },
+    {
+      "name": "act_as_user_scoped_sample",
+      "status": "pass",
+      "summary": "Operator actAsUser sample used the recruiter's scoped view.",
+      "details": {
+        "actAsUser": 101,
+        "effectiveActorId": 101,
+        "scoped": true,
+        "permissionScopeKind": "jobs",
+        "permittedJobCount": 3
+      }
+    },
+    {
+      "name": "forbidden_job_leakage",
+      "status": "pass",
+      "summary": "Known forbidden job is visible to operator but hidden from actAsUser scoped preview.",
+      "details": {
+        "unscopedVisible": true,
+        "scopedVisible": false
+      }
+    }
+  ],
+  "auditEventCount": 5
+}

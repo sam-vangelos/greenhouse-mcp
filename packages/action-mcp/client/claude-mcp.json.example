@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "greenhouse_action": {
+      "type": "http",
+      "url": "https://greenhouse-action-mcp.example.com/mcp",
+      "headers": {
+        "Authorization": "Bearer ${GREENHOUSE_ACTION_SESSION_TOKEN}"
+      }
+    }
+  }
+}

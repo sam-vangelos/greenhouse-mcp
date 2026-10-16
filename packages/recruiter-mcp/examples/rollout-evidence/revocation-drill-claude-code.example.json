@@ -1,0 +1,26 @@
+{
+  "reportVersion": 2,
+  "ok": false,
+  "status": "not_ready",
+  "evidenceState": "example_only",
+  "warning": "Static expected-shape example only. Replace it with a real remote revocation drill from the approved candidate deployment.",
+  "checkedAt": "2026-06-23T00:00:00.000Z",
+  "mcpUrl": "https://greenhouse-recruiter-mcp.example.com/mcp",
+  "activeSessionSurface": "claude_desktop",
+  "activeSessionClient": "claude_code",
+  "activeSessionTokenId": "claude-code-token-id",
+  "activeSessionIssuedAt": "2026-06-23T00:00:00.000Z",
+  "revokedSessionSurface": "claude_desktop",
+  "revokedSessionClient": "claude_code",
+  "revokedSessionTokenId": "revoked-claude-code-token-id",
+  "revokedSessionIssuedAt": "2026-06-23T00:00:00.000Z",
+  "containsTokens": false,
+  "expectedChecks": [
+    { "name": "active_token_metadata", "status": "pass", "summary": "Session token metadata is present." },
+    { "name": "revoked_token_metadata", "status": "pass", "summary": "Session token metadata is present." },
+    { "name": "matching_client_identity", "status": "pass", "summary": "Active and revoked drill tokens belong to the same physical client." },
+    { "name": "distinct_token_ids", "status": "pass", "summary": "Active and revoked drill tokens are distinct." },
+    { "name": "active_initialize", "status": "pass", "summary": "Active durable session initialized the remote recruiter MCP." },
+    { "name": "revoked_initialize_denied", "status": "pass", "summary": "Revoked durable session token was denied by the remote recruiter MCP." }
+  ]
+}

@@ -1,0 +1,27 @@
+name: greenhouse-mcp-ci
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Verify (build control plane, then typecheck + tests + guards per package)
+        run: npm run verify
+
+      - name: Read-only proof, visibly enforced
+        run: node packages/recruiter-mcp/scripts/verify-package.mjs

@@ -1,0 +1,46 @@
+{
+  "ok": false,
+  "status": "not_ready",
+  "evidenceState": "example_only",
+  "warning": "Static expected-shape example only. Replace it with a real matching-recipient desktop delivery report.",
+  "deliveredAt": "2026-06-23T00:00:00.000Z",
+  "deliveredBy": "ops-reviewer@example.com",
+  "deliveryChannel": "managed_desktop_install",
+  "containsTokens": false,
+  "desktopConfigManifestPath": "desktop-configs/manifest.example.json",
+  "expectedDeliveries": [
+    {
+      "email": "recruiter@example.com",
+      "recipientEmail": "recruiter@example.com",
+      "surface": "chatgpt_desktop",
+      "client": "chatgpt_codex_host",
+      "tokenId": "chatgpt-token-id",
+      "configPath": "desktop-configs/recruiter-chatgpt.example.json",
+      "deliveryChannel": "managed_desktop_install",
+      "deliveredToMatchingRecruiter": true,
+      "issuedAt": "2026-06-23T00:00:00.000Z"
+    },
+    {
+      "email": "recruiter@example.com",
+      "recipientEmail": "recruiter@example.com",
+      "surface": "claude_desktop",
+      "client": "claude_desktop_chat",
+      "tokenId": "claude-token-id",
+      "configPath": "desktop-configs/recruiter-example.com--greenhouse-recruiter.mcpb",
+      "deliveryChannel": "managed_desktop_install",
+      "deliveredToMatchingRecruiter": true,
+      "issuedAt": "2026-06-23T00:00:00.000Z"
+    },
+    {
+      "email": "recruiter@example.com",
+      "recipientEmail": "recruiter@example.com",
+      "surface": "claude_desktop",
+      "client": "claude_code",
+      "tokenId": "claude-code-token-id",
+      "configPath": "desktop-configs/recruiter-claude-code.example.json",
+      "deliveryChannel": "managed_desktop_install",
+      "deliveredToMatchingRecruiter": true,
+      "issuedAt": "2026-06-23T00:00:00.000Z"
+    }
+  ]
+}

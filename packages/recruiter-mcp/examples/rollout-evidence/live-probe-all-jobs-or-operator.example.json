@@ -1,0 +1,161 @@
+{
+  "ok": false,
+  "status": "not_ready",
+  "evidenceState": "example_only",
+  "warning": "Static expected-shape example only. Replace it with a real strict probe from the approved candidate deployment.",
+  "strict": true,
+  "profile": "all_jobs_or_operator",
+  "buildCommit": "",
+  "generatedAt": "2026-06-23T00:00:00.000Z",
+  "surface": "chatgpt_desktop",
+  "client": "chatgpt_codex_host",
+  "sessionSubjectPresent": true,
+  "sessionTokenId": "",
+  "sessionIssuedAt": "",
+  "auditEventCount": 14,
+  "expectedChecks": [
+    {
+      "name": "scoped_jobs_sample",
+      "status": "pass",
+      "summary": "all_jobs_or_operator job sample",
+      "details": {
+        "rowsReturned": 120
+      }
+    },
+    {
+      "name": "expected_job_visibility",
+      "status": "pass",
+      "summary": "expected permitted jobs were visible"
+    },
+    {
+      "name": "forbidden_job_exclusion",
+      "status": "pass",
+      "summary": "known forbidden jobs were excluded"
+    },
+    {
+      "name": "endpoint_contract_jobs_ids",
+      "status": "pass",
+      "summary": "jobs ids filter returned exactly the requested row",
+      "details": {
+        "endpoint": "/jobs",
+        "filter": "ids",
+        "exactRows": 1,
+        "wrongIdRows": 0
+      }
+    },
+    {
+      "name": "endpoint_contract_forbidden_jobs_ids",
+      "status": "pass",
+      "summary": "forbidden jobs ids filter returned no exact forbidden row",
+      "details": {
+        "endpoint": "/jobs",
+        "filter": "ids",
+        "exactLeaks": 0
+      }
+    },
+    {
+      "name": "endpoint_contract_applications_ids",
+      "status": "pass",
+      "summary": "applications ids filter returned exactly the requested row",
+      "details": {
+        "endpoint": "/applications",
+        "filter": "ids",
+        "exactRows": 1,
+        "wrongIdRows": 0
+      }
+    },
+    {
+      "name": "endpoint_contract_applications_job_ids",
+      "status": "pass",
+      "summary": "applications job_ids filter returned only matching rows",
+      "details": {
+        "endpoint": "/applications",
+        "filter": "job_ids",
+        "matchingRows": 1,
+        "wrongRows": 0
+      }
+    },
+    {
+      "name": "endpoint_contract_applications_candidate_ids",
+      "status": "pass",
+      "summary": "applications candidate_ids filter returned only matching rows",
+      "details": {
+        "endpoint": "/applications",
+        "filter": "candidate_ids",
+        "matchingRows": 1,
+        "wrongRows": 0
+      }
+    },
+    {
+      "name": "endpoint_contract_scorecards_application_ids",
+      "status": "pass",
+      "summary": "scorecards application_ids filter returned only matching rows",
+      "details": {
+        "endpoint": "/scorecards",
+        "filter": "application_ids",
+        "matchingRows": 1,
+        "wrongRows": 0
+      }
+    },
+    {
+      "name": "scorecard_shape_sample",
+      "status": "pass",
+      "summary": "scorecard shape accepted for rollout"
+    },
+    {
+      "name": "scoped_applications_sample",
+      "status": "pass",
+      "summary": "application sample completed"
+    },
+    {
+      "name": "candidate_shape_sample",
+      "status": "pass",
+      "summary": "candidate shape accepted for rollout"
+    },
+    {
+      "name": "notes_visibility_sample",
+      "status": "pass",
+      "summary": "notes visibility sample completed"
+    },
+    {
+      "name": "scorecard_accountability_analysis",
+      "status": "pass",
+      "summary": "scorecard accountability analysis completed"
+    },
+    {
+      "name": "interview_feedback_drag_analysis",
+      "status": "pass",
+      "summary": "interview feedback drag analysis completed"
+    },
+    {
+      "name": "stage_latency_analysis",
+      "status": "pass",
+      "summary": "stage latency analysis completed"
+    },
+    {
+      "name": "pipeline_quality_analysis",
+      "status": "pass",
+      "summary": "pipeline quality analysis completed"
+    },
+    {
+      "name": "source_quality_analysis",
+      "status": "pass",
+      "summary": "source quality analysis completed"
+    },
+    {
+      "name": "rejection_reason_drift_analysis",
+      "status": "pass",
+      "summary": "rejection reason drift analysis completed"
+    },
+    {
+      "name": "question_planner_analysis",
+      "status": "pass",
+      "summary": "constrained question planner analysis completed"
+    },
+    {
+      "name": "activity_endpoint_shape",
+      "status": "skip",
+      "summary": "list_activity is intentionally not exposed in v1"
+    }
+  ]
+}
