@@ -8,8 +8,6 @@ I use Greenhouse MCP not mainly to ask an assistant questions, but as the founda
 
 <!-- METRIC: number of recruiters using it, or questions answered per week, if Sam supplies it -->
 
-I am a recruiter, not a software engineer, and I built this by directing AI coding agents against written specifications, adversarial reviews, and live verification against the Greenhouse API.
-
 > Curated public snapshot as of 15 October 2026. Private development history, tenant-specific configuration, and deployment-specific artifacts are omitted.
 
 ## System architecture and design choices
@@ -74,10 +72,6 @@ node packages/recruiter-mcp/scripts/verify-package.mjs
 - [`packages/action-mcp/README.md`](packages/action-mcp/README.md) — write capability catalog (13 capabilities, 26 tools), preview/apply flow, and reconciliation commands.
 - [`packages/scoped-core/README.md`](packages/scoped-core/README.md) — `ActorResolver`, `PermissionProvider`, and `RawReadClient` ports and default-deny filtering rules.
 - [`packages/control-plane/start-here.md`](packages/control-plane/start-here.md) — running the unscoped operator control-plane server locally.
-
-## How it was built
-
-I built this workspace as a senior technical recruiter directing AI coding agents under written specifications, adversarial code and architecture reviews, static module-boundary guards (`packages/recruiter-mcp/scripts/verify-guards.mjs` and `packages/action-mcp/scripts/verify-package.mjs`), contract tests against a fake Harvest server backed by `packages/recruiter-mcp/src/harvest-v3-registry.generated.ts` (72 `GET` endpoints), and live API verification against Greenhouse Harvest v3.
 
 ## License
 
